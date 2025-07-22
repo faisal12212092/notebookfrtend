@@ -1,5 +1,5 @@
 import React from "react";
-import { FaTrashAlt, FaEdit } from "react-icons/fa";
+// import { FaTrashAlt, FaEdit } from "react-icons/fa";
 
 const Noteitem = ({ note, deleteNote, editNote }) => {
   const handleDelete = () => {
