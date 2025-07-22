@@ -6,7 +6,7 @@ const NoteState = (props) => {
 
   // Fetch all notes from backend
   const getNotes = async () => {
-    const response = await fetch("http://localhost:5000/api/notes/fetchallnotes", {
+    const response = await fetch("https://notebookbackend-sfa8.onrender.com/api/notes/fetchallnotes", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -18,7 +18,7 @@ const NoteState = (props) => {
   };
 
   const addNote = async (title, description, tag) => {
-  const response = await fetch("http://localhost:5000/api/notes/addnotes", {
+  const response = await fetch("https://notebookbackend-sfa8.onrender.com/api/notes/addnotes", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -31,7 +31,7 @@ const NoteState = (props) => {
 };
   // ...other note functions (addNote, deleteNote, etc.)...
 const deleteNote = async (id) => {
-  const response = await fetch(`http://localhost:5000/api/notes/deletenote/${id}`, {
+  const response = await fetch(`https://notebookbackend-sfa8.onrender.com/api/notes/deletenote/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -47,7 +47,7 @@ const deleteNote = async (id) => {
   }
 };
 const editNote = async (id, title, description, tag) => {
-  await fetch(`http://localhost:5000/api/notes/updatenote/${id}`, {
+  await fetch(`https://notebookbackend-sfa8.onrender.com/api/notes/updatenote/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
